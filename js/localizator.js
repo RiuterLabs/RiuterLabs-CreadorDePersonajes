@@ -42,7 +42,15 @@ class Localizator{
         this.localizarSeccionesData("datosIntra");
         this.localizarCards("datos");
         this.localizarCards("datosIntra");
+        this.localizarEdad();
+    }
 
+    localizarEdad(){
+        this.setText("nombreLabel","general","labelNombre");
+        this.setText("edadTitulo","general", "edadTitulo");
+        this.setText("dayLabel", "general","dias");
+        this.setText("mesLabel", "general","mes");
+        this.setText("edadLabel", "general","edad");
     }
 
     localizarSeccionesData(type){

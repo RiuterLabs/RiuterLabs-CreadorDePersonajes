@@ -6,7 +6,7 @@ const data_general_ESP={
     "descargar":"Descargar",
     "importar":"Importar fichero",
     "importarDesc":"Elija un archivo a importar",
-    "nombreTitulo":"Nombre",
+    "nombreTitulo":"Información general",
     "coloresTitulo":"Colores",
     "colorPelo":"Color de pelo",
     "colorPiel":"Color de piel",
@@ -14,5 +14,10 @@ const data_general_ESP={
     "puntosTitulo":"Puntos",
     "creatorTitle":"Creador de personajes",
     "nombreImplementacion":"Nombre de la implementación",
-    "logros":"Logros"
+    "logros":"Logros",
+    "labelNombre":"Nombre",
+    "edadTitulo":"Selecciona tu edad y fecha de nacimiento",
+    "dias":"Día",
+    "mes":"Mes",
+    "edad":"Edad"
 }

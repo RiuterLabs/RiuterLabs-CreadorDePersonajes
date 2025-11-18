@@ -6,7 +6,7 @@ const data_general_ENG= {
     "descargar":"Download",
     "importar":"Import file",
     "importarDesc":"Choose a file to import",
-    "nombreTitulo":"Name",
+    "nombreTitulo":"General information",
     "coloresTitulo":"Colors",
     "colorPelo":"Hair color",
     "colorPiel":"Skin tone",
@@ -14,6 +14,11 @@ const data_general_ENG= {
     "puntosTitulo":"Points",
     "creatorTitle":"Character Creator",
     "nombreImplementacion":"Implementation name",
-    "logros":"Achievements"
+    "logros":"Achievements",
+    "labelNombre":"Name",
+    "edadTitulo":"Select your birthday and age",
+    "dias":"Day",
+    "mes":"Month",
+    "edad":"Age"
 }
 

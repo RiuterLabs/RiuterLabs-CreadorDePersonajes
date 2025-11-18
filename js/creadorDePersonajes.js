@@ -11,6 +11,14 @@ class CreadorDePersonajes{
         this.colorPelo="";
         this.name="";
         this.nameIntra="";
+        this.maxDias=15;
+        this.meses=["Zannes","Tolmaral" ,"Qatar","Mayal","Berbal", "Fix","Hana","Mirel","Vera","Axtor","Amthos"
+,"Daeris","Décimo","Adamar","Yul","Nictal","Prak","Cael","Phradi","Jar","Daeda","Omnys","Tenet","Maerul","Lloretz"]
+        this.fechaNacimiento={
+            dia:0,
+            mes:0
+        },
+        this.edad=0;
         this.selected=[];
         this.desplegadas=[];
         this.logrosDesplegados=false;
@@ -18,10 +26,10 @@ class CreadorDePersonajes{
         this.idiomaSeleccionado="ESP";
         this.idiomas=["ESP","ENG"];
         this.resourceLoader=new ResourceLoader(this.idiomaSeleccionado, ()=>{this.fetchIdioma().bind(this)});
-        
         this.cargarArchivo();
         this.cargarArchivoIntra();
         this.cargarArchivoLogros();
+        this.crearEdad();
         this.initData();
         this.localizator=new Localizator();
         this.localizator.localizar();
@@ -36,6 +44,41 @@ class CreadorDePersonajes{
             div.removeChild(div.firstChild);
         }
     }
+
+    crearEdad(){
+        var dias = $("#day");
+        var meses=$("#mes")
+        this.clearElement("day");
+        this.clearElement("mes");
+        for(var i=0; i<this.maxDias; i++){
+            var dia = document.createElement("option");
+            dia.value=i;
+            dia.textContent=i;
+            dias.append(dia);
+        }
+
+        for(var i=0; i<this.meses.length; i++){
+            var mes = this.meses[i];
+            var dia = document.createElement("option");
+            dia.value=i;
+            dia.textContent=mes;
+            meses.append(dia);
+        }
+    }
+
+    cambiarDia(dia){
+        this.fechaNacimiento.dia=dia.value;
+        this.guardarEnBaseDeDatos();
+    }
+      cambiarMes(dia){
+        this.fechaNacimiento.mes=dia.value;
+        this.guardarEnBaseDeDatos();
+    }
+      cambiarEdad(dia){
+        this.edad=dia.value;
+        this.guardarEnBaseDeDatos();
+    }
+    
 
     crearBotones() {
         var data = this.datos;
@@ -276,9 +319,18 @@ class CreadorDePersonajes{
         this.updateTarjetas();
         this.updateYaLasTienes();
         this.updateLogros();
+        this.updateFecha();
         
     }
 
+    updateFecha(){
+        var dias = $("#day")[0];
+        dias.value = Number(this.fechaNacimiento.dia);
+         var meses = $("#mes")[0];
+        meses.value = Number(this.fechaNacimiento.mes);
+         var edad = $("#edad")[0];
+        edad.value = Number(this.edad);
+    }
     updateLogros(){
         this.checkLogros();
         var seccionLogros = $("#seccionLogros");
@@ -524,7 +576,10 @@ class CreadorDePersonajes{
             "colorOjos":this.colorOjos,
             "colorPelo":this.colorPelo,
             "colorPiel":this.colorPiel,
-            "logrosDesbloqueados":this.logrosDesbloqueados
+            "logrosDesbloqueados":this.logrosDesbloqueados,
+            "idioma":this.localizator.idiomaSeleccionado,
+            "fechaNacimiento":this.fechaNacimiento,
+            "edad":this.edad
         }
     }
 
@@ -544,6 +599,7 @@ class CreadorDePersonajes{
                 var cantidad = result.length;
                 if(cantidad>=1){
                     var datos = result.slice(-1)[0];
+                    
                     if(datos!=undefined){
                         this.puntos = datos.puntos;
                     this.selected = datos.seleccionados;
@@ -569,6 +625,17 @@ class CreadorDePersonajes{
                         this.colorPiel = "#000000";
                     if(datos.logrosDesbloqueados !=undefined)
                         this.logrosDesbloqueados = datos.logrosDesbloqueados;
+                    this.fechaNacimiento=datos.fechaNacimiento;
+                    if(this.fechaNacimiento==undefined)
+                        this.fechaNacimiento={dia:"1", mes:"1"}
+                    this.edad=datos.edad;
+                    if(this.edad==undefined)
+                        this.edad=0;
+                    var idioma = datos.idioma;
+                    if(idioma!=undefined){
+                        this.localizator.cambiarIdioma(idioma);
+                    }
+                        
                     this.updateVista();
                     }
                     
