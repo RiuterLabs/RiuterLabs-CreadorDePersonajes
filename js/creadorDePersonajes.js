@@ -65,17 +65,18 @@ class CreadorDePersonajes{
         seccionBotones.innerHTML = "";
         var title = document.createElement("h3");
         title.html = "Intra";
-
+        var cats = [];
         for (var i = 0; i<data.length; i++){
             var element = data[i];
             var seccionBoton = document.createElement("div");
             seccionBoton.id = element["nombreCat"]
             var boton = this.crearBoton(element);
-            
+            cats.push(element.nombreCat);
             seccionBoton.append(boton);
             seccionBotones.append(seccionBoton);
-            this.crearTarjetas2(element);
+            this.crearTarjetasIntra(element);
         }
+        this.localizator.setIntraCats(cats);
        
     }
 
@@ -114,6 +115,27 @@ class CreadorDePersonajes{
         for(var i =0; i<tarjetas.length; i++){
             var infoTar = tarjetas[i];
             var tarjeta = this.crearTarjeta(infoTar);
+            seccionTarjetas.append(tarjeta);
+        }
+        
+        this.updateVista();
+    }
+
+     crearTarjetasIntra(info){
+        var seccionBotones = $("#"+info["nombreCat"]);
+        var seccionTarjetas = document.getElementById("seccionTarjetas"+info["nombreCat"]);
+        
+        if(seccionTarjetas==undefined || seccionTarjetas==null){
+            seccionTarjetas = document.createElement("div");
+            seccionTarjetas.id="seccionTarjetas"+info["nombreCat"];
+            seccionBotones.append(seccionTarjetas);
+        }else{
+            seccionTarjetas.innerHTML ="";
+        }
+        var tarjetas = info["tarjetas"];
+        for(var i =0; i<tarjetas.length; i++){
+            var infoTar = tarjetas[i];
+            var tarjeta = this.crearTarjetaIntra(infoTar);
             seccionTarjetas.append(tarjeta);
         }
         
@@ -171,7 +193,34 @@ class CreadorDePersonajes{
         var puntos = document.createElement("p");
         puntos.textContent = info["coste"];
         var img = document.createElement("img");
-        img.id="img"+id;
+        img.id="img"+id
+        $(img).attr("src","../multimedia/imagenes/creador/"+info["id"]+".jpg");
+        $(img).attr("alt",info["desc"]);
+        var desc = document.createElement("p");
+        desc.textContent = info["desc"];
+        desc.id="desc"+id;
+        tarjeta.addEventListener("click",this.addTf.bind(this,info));
+
+        tarjeta.append(h4);
+        tarjeta.append(puntos);
+        tarjeta.append(img);
+        tarjeta.append(desc);
+        return tarjeta;
+    }
+
+    
+    crearTarjetaIntra(info){
+        var tarjeta = document.createElement("section");
+        var id= info["id"];
+        tarjeta.id = id
+        this.localizator.addIntraCardID(id);
+        var h4 = document.createElement("h4");
+        h4.textContent = info["titulo"];
+        h4.id="title"+id;
+        var puntos = document.createElement("p");
+        puntos.textContent = info["coste"];
+        var img = document.createElement("img");
+        img.id="img"+id
         $(img).attr("src","../multimedia/imagenes/creador/"+info["id"]+".jpg");
         $(img).attr("alt",info["desc"]);
         var desc = document.createElement("p");

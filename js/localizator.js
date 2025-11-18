@@ -3,7 +3,9 @@ class Localizator{
         this.idiomaSeleccionado="ESP";
         this.idiomas=["ESP","ENG"];
         this.dataCats=[];
+        this.intraCats=[];
         this.cardsID=[];
+        this.intraCardsID=[];
         this.resourceLoader=new ResourceLoader(this.idiomaSeleccionado);
         this.localizar();
     }
@@ -13,9 +15,18 @@ class Localizator{
             this.cardsID.push(id);
         }
     }
+     addIntraCardID(id){
+        if(!this.intraCardsID.includes(id)){
+            this.intraCardsID.push(id);
+        }
+    }
 
     setDataCats(cats){
         this.dataCats=cats;
+    }
+
+     setIntraCats(cats){
+        this.intraCats=cats;
     }
     clearElement(id){
         var div = document.getElementById(id);
@@ -32,7 +43,9 @@ class Localizator{
         this.localizarColores();
         this.localizarPuntos();
         this.localizarSeccionesData();
+        this.localizarSeccionesIntra();
         this.localizarCards();
+        this.localizarCardsIntra();
     }
 
     localizarSeccionesData(){
@@ -43,12 +56,30 @@ class Localizator{
         }
     }
 
+    localizarSeccionesIntra(){
+        for(var i =0; i<this.intraCats.length; i++){
+            var id = this.intraCats[i];
+            var buttonID = "toggle"+id;
+            this.setText(buttonID, "datosIntra", id);
+        }
+    }
+
+
     localizarCards(){
         for(var i =0; i<this.cardsID.length; i++){
             var id = this.cardsID[i];
             this.setText("title"+id, "datos", id+"title");
             this.setText("desc"+id,"datos", id+"desc");
             this.setAlt("img"+id,"datos", id+"desc");
+        }
+    }
+
+    localizarCardsIntra(){
+        for(var i =0; i<this.intraCardsID.length; i++){
+            var id = this.intraCardsID[i];
+            this.setText("title"+id, "datosIntra", id+"title");
+            this.setText("desc"+id,"datosIntra", id+"desc");
+            this.setAlt("img"+id,"datosIntra", id+"desc");
         }
     }
 

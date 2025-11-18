@@ -6,7 +6,10 @@ class ResourceLoader{
             "ESP":datos_ESP,
             "ENG":datos_ENG
         };
-        this.datosIntra={};
+        this.datosIntra={
+            "ESP":datos_intra_ESP,
+            "ENG":datos_intra_ENG,
+        };
         this.general={
             "ESP":data_general_ESP,
             "ENG":data_general_ENG

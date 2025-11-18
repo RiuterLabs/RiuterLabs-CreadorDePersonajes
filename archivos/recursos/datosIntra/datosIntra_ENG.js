@@ -1,3 +1,18 @@
-const datos_intra_ESP={
-    
+const datos_intra_ENG={
+    "Grupos-de-nucleos":"Core groups",
+    "Nucleos-Elementales":"Elemental cores",
+    "Nucleos-Sagrados":"Holy cores",
+    "Nucleos-Profanos":"Unholy cores",
+    "Nucleos-Naturales":"Natural cores",
+    "Nucleos-Arcanos":"Arcane cores",
+    Elementalestitle:"Elemental",
+    Elementalesdesc:"Air, Earth, Water, Fire and Electricity. Thanks to the cores of the Wizard you'll be able to control the elements that constitute our world (As told by the arcanists and people which don't know about chemistry, of course)." ,
+    Sagradostitle:"Holy",
+    Sagradosdesc:"The absolute epythome of faith, purity and fanatism. With this cores touched by the Wizard and the Mother you'll be able to do anything luminous, healing and sterotypically pretty. But be careful not to become too faithful...",
+    Profanostitle:"Unholy",
+    Profanosdesc:"Uuuuuuuh, you wanna be a bad girl, huh? Fuckin' great! Raise the dead from their graves, read people's souls, rot everything around you and manipulate everyone with your dark gifts! (This space's been sponsored by the Association of Supporters of the Daemon Core)",
+    Naturalestitle:"Natural",
+    Naturalesdesc:"You know, the closest cores to The Boss (Or The Mother, however you wanna call her). With things like animals, plants, healing more stuff... Perfect if you like things that move, drool and grow!",
+    Arcanostitle:"Arcane",
+    Arcanosdesc:"The most mysterious and strange of them all. We don't really know why, but with this ones you'll be able to weave the threads of the fabric of reality. Space and time will surrender to your will. You'll see everything as a strange code. However, be careful not to become to close to the Strange...",
 }
