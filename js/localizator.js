@@ -24,7 +24,7 @@ class Localizator{
     localizarTitulo(){
         this.setText("creatorTitle", "general", "creatorTitle");
         this.setText("logrosTitle","general","logros");
-        this.setValue("toggleLogros", "general","logros");
+        this.setText("toggleLogros", "general","logros");
         this.setText("implementacionTitle","general","nombreImplementacion")
     }
 
