@@ -53,10 +53,10 @@ class CreadorDePersonajes{
             cats.push(element.nombreCat);
             seccionBoton.append(boton);
             seccionBotones.append(seccionBoton);
-            this.crearTarjetas2(element);
+            this.crearTarjetas2(element, "datos");
         }
 
-        this.localizator.setDataCats(cats);
+        this.localizator.setDataCats(cats, "datos");
        
     }
     crearBotonesIntra() {
@@ -74,9 +74,9 @@ class CreadorDePersonajes{
             cats.push(element.nombreCat);
             seccionBoton.append(boton);
             seccionBotones.append(seccionBoton);
-            this.crearTarjetasIntra(element);
+            this.crearTarjetas2(element, "datosIntra");
         }
-        this.localizator.setIntraCats(cats);
+        this.localizator.setDataCats(cats, "datosIntra");
        
     }
 
@@ -100,7 +100,7 @@ class CreadorDePersonajes{
     }
 
 
-    crearTarjetas2(info){
+    crearTarjetas2(info, type){
         var seccionBotones = $("#"+info["nombreCat"]);
         var seccionTarjetas = document.getElementById("seccionTarjetas"+info["nombreCat"]);
         
@@ -114,33 +114,13 @@ class CreadorDePersonajes{
         var tarjetas = info["tarjetas"];
         for(var i =0; i<tarjetas.length; i++){
             var infoTar = tarjetas[i];
-            var tarjeta = this.crearTarjeta(infoTar);
+            var tarjeta = this.crearTarjeta(infoTar, type);
             seccionTarjetas.append(tarjeta);
         }
         
         this.updateVista();
     }
 
-     crearTarjetasIntra(info){
-        var seccionBotones = $("#"+info["nombreCat"]);
-        var seccionTarjetas = document.getElementById("seccionTarjetas"+info["nombreCat"]);
-        
-        if(seccionTarjetas==undefined || seccionTarjetas==null){
-            seccionTarjetas = document.createElement("div");
-            seccionTarjetas.id="seccionTarjetas"+info["nombreCat"];
-            seccionBotones.append(seccionTarjetas);
-        }else{
-            seccionTarjetas.innerHTML ="";
-        }
-        var tarjetas = info["tarjetas"];
-        for(var i =0; i<tarjetas.length; i++){
-            var infoTar = tarjetas[i];
-            var tarjeta = this.crearTarjetaIntra(infoTar);
-            seccionTarjetas.append(tarjeta);
-        }
-        
-        this.updateVista();
-    }
 
     crearTarjetasLogros(){
         var seccionLogros = $("#seccionLogros");
@@ -182,38 +162,11 @@ class CreadorDePersonajes{
     
 
 
-    crearTarjeta(info){
+    crearTarjeta(info, type){
         var tarjeta = document.createElement("section");
         var id= info["id"];
         tarjeta.id = id
-        this.localizator.addCardID(id);
-        var h4 = document.createElement("h4");
-        h4.textContent = info["titulo"];
-        h4.id="title"+id;
-        var puntos = document.createElement("p");
-        puntos.textContent = info["coste"];
-        var img = document.createElement("img");
-        img.id="img"+id
-        $(img).attr("src","../multimedia/imagenes/creador/"+info["id"]+".jpg");
-        $(img).attr("alt",info["desc"]);
-        var desc = document.createElement("p");
-        desc.textContent = info["desc"];
-        desc.id="desc"+id;
-        tarjeta.addEventListener("click",this.addTf.bind(this,info));
-
-        tarjeta.append(h4);
-        tarjeta.append(puntos);
-        tarjeta.append(img);
-        tarjeta.append(desc);
-        return tarjeta;
-    }
-
-    
-    crearTarjetaIntra(info){
-        var tarjeta = document.createElement("section");
-        var id= info["id"];
-        tarjeta.id = id
-        this.localizator.addIntraCardID(id);
+        this.localizator.addCardID(id, type);
         var h4 = document.createElement("h4");
         h4.textContent = info["titulo"];
         h4.id="title"+id;

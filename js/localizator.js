@@ -2,31 +2,27 @@ class Localizator{
     constructor(){
         this.idiomaSeleccionado="ESP";
         this.idiomas=["ESP","ENG"];
-        this.dataCats=[];
+        this.dataCats={
+            datos:[],
+            datosIntra:[]
+        };
         this.intraCats=[];
-        this.cardsID=[];
+        this.cardsID={
+            general:[],
+            datos:[],
+            datosIntra:[]
+        };
         this.intraCardsID=[];
         this.resourceLoader=new ResourceLoader(this.idiomaSeleccionado);
         this.localizar();
     }
-
-    addCardID(id){
-        if(!this.cardsID.includes(id)){
-            this.cardsID.push(id);
+    addCardID(id, type){
+        if(!this.cardsID[type].includes(id)){
+            this.cardsID[type].push(id);
         }
     }
-     addIntraCardID(id){
-        if(!this.intraCardsID.includes(id)){
-            this.intraCardsID.push(id);
-        }
-    }
-
-    setDataCats(cats){
-        this.dataCats=cats;
-    }
-
-     setIntraCats(cats){
-        this.intraCats=cats;
+    setDataCats(cats, type){
+        this.dataCats[type]=cats;
     }
     clearElement(id){
         var div = document.getElementById(id);
@@ -42,44 +38,28 @@ class Localizator{
         this.localizarNombre();
         this.localizarColores();
         this.localizarPuntos();
-        this.localizarSeccionesData();
-        this.localizarSeccionesIntra();
-        this.localizarCards();
-        this.localizarCardsIntra();
+        this.localizarSeccionesData("datos");
+        this.localizarSeccionesData("datosIntra");
+        this.localizarCards("datos");
+        this.localizarCards("datosIntra");
+
     }
 
-    localizarSeccionesData(){
-        for(var i =0; i<this.dataCats.length; i++){
-            var id = this.dataCats[i];
+    localizarSeccionesData(type){
+        for(var i =0; i<this.dataCats[type].length; i++){
+            var id = this.dataCats[type][i];
             var buttonID = "toggle"+id;
-            this.setText(buttonID, "datos", id);
-        }
-    }
-
-    localizarSeccionesIntra(){
-        for(var i =0; i<this.intraCats.length; i++){
-            var id = this.intraCats[i];
-            var buttonID = "toggle"+id;
-            this.setText(buttonID, "datosIntra", id);
+            this.setText(buttonID, type, id);
         }
     }
 
 
-    localizarCards(){
-        for(var i =0; i<this.cardsID.length; i++){
-            var id = this.cardsID[i];
-            this.setText("title"+id, "datos", id+"title");
-            this.setText("desc"+id,"datos", id+"desc");
-            this.setAlt("img"+id,"datos", id+"desc");
-        }
-    }
-
-    localizarCardsIntra(){
-        for(var i =0; i<this.intraCardsID.length; i++){
-            var id = this.intraCardsID[i];
-            this.setText("title"+id, "datosIntra", id+"title");
-            this.setText("desc"+id,"datosIntra", id+"desc");
-            this.setAlt("img"+id,"datosIntra", id+"desc");
+    localizarCards(type){
+        for(var i =0; i<this.cardsID[type].length; i++){
+            var id = this.cardsID[type][i];
+            this.setText("title"+id, type, id+"title");
+            this.setText("desc"+id,type, id+"desc");
+            this.setAlt("img"+id,type, id+"desc");
         }
     }
 
