@@ -1,0 +1,18 @@
+const data_general_ESP={
+    "btESP":"Español",
+    "btENG":"Inglés",
+    "tituloBtIdioma":"Selección de idioma",
+    "tituloCargar":"Cargar y descargar",
+    "descargar":"Descargar",
+    "importar":"Importar fichero",
+    "importarDesc":"Elija un archivo a importar",
+    "nombreTitulo":"Nombre",
+    "coloresTitulo":"Colores",
+    "colorPelo":"Color de pelo",
+    "colorPiel":"Color de piel",
+    "colorOjos":"Color de ojos",
+    "puntosTitulo":"Puntos",
+    "creatorTitle":"Creador de personajes",
+    "nombreImplementacion":"Nombre de la implementación",
+    "logros":"Logros"
+}

@@ -4,6 +4,11 @@
         <script>
             $("head").load("fragments/cabeceras/headRegistro.html");
         </script>
+        <script src="archivos/recursos/general/general_ENG.js"></script>
+        <script src="archivos/recursos/general/general_ESP.js"></script>
+
+        <script src="js/resourceLoader.js"></script>
+        <script src="js/localizator.js"></script>
         <script src="js/creadorDePersonajes.js"></script>
     </head>
         
@@ -16,33 +21,41 @@
         </header>
        
         <main>
-            <h2>Creador de personajes</h2>
+            <h2 id="creatorTitle">Creador de personajes</h2>
 
-            <section class="puntos">
-                <h3>Cargar y descargar</h3>
-                <input type="button" onclick="CreadorP.descargar()" value="Descargar"/>
-                <label><input type="file" onchange="CreadorP.readInputFile(this.files);">Elija un archivo a importar</label>
+            <section class="puntos" id="botonesIdioma">
+                
+            </section>
+
+            <section class="puntos" id="cargaYDescarga">
+                <h3 id="cargaYDescargaTitle">Cargar y descargar</h3>
+                <input id="cargaYDescargaDescarga" type="button" onclick="CreadorP.descargar()" value="Descargar"/>
+                <label for="cargaYDescargaCarga"id="cargaYDescargaCargaLabel">Elija un archivo a importar</label>
+                <input id="cargaYDescargaCarga" type="file" onchange="CreadorP.readInputFile(this.files);">
             </section>
             
             <section class="puntos">
-                <h3>Nombre</h3>
+                <h3 id="nombreTitulo">Nombre</h3>
                 <label><input type="text" id="textoNombre" onchange="CreadorP.cambiarNombre()"/></label>
                 
             </section>
             
             <section class="puntos colores">
-                <h3>Colores</h3>
+                <h3 id="coloresTitulo">Colores</h3>
                 <section>
-                    <label>Color de pelo <input type="color" id="colorPelo" onchange="CreadorP.cambiarColorPelo()"/></label>
-                    <label>Color de piel <input type="color" id="colorPiel" onchange="CreadorP.cambiarColorPiel()"/></label>
-                    <label>Color de ojos <input type="color" id="colorOjos" onchange="CreadorP.cambiarColorOjos()"/></label>
+                    <label id="colorPeloLabel" for="colorPelo">Color de pelo </label>
+                        <input type="color" id="colorPelo" onchange="CreadorP.cambiarColorPelo()"/>
+                    <label id="colorPielLabel" for="colorPiel">Color de piel </label>
+                        <input type="color" id="colorPiel" onchange="CreadorP.cambiarColorPiel()"/>
+                    <label id="colorOjosLabel" for="colorOjos">Color de ojos </label>
+                        <input type="color" id="colorOjos" onchange="CreadorP.cambiarColorOjos()"/>
     
                 </section>
                
             </section>
           
             <section class="puntos">
-                <h3>Puntos</h3>
+                <h3 id="puntosTitulo">Puntos</h3>
                 <p id="puntosActuales">0</p>
             </section>
             <section id="seccionesBotones">
@@ -50,17 +63,17 @@
             </section>
 
             <section class="puntos">
-                <h3>Nombre de la Implementación</h3>
+                <h3 id="implementacionTitle">Nombre de la Implementación</h3>
                 <label><input type="text" id="textoNombreIntra" onchange="CreadorP.cambiarNombreIntra()"/></label>
             </section>
 
             <section id="seccionesBotonesIntra">
             
             </section>
-            <button onclick="CreadorP.toggleLogros()">Logros</button>
+            <button id="toggleLogros"onclick="CreadorP.toggleLogros()">Logros</button>
 
             <aside id="seccionLogros">
-                <h3>Logros</h3>
+                <h3 id="logrosTitle">Logros</h3>
                
             </aside>
             <script>

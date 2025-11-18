@@ -1,3 +1,4 @@
+
 class CreadorDePersonajes{
     constructor(puntosInicio){
         this.datos=[];
@@ -14,11 +15,25 @@ class CreadorDePersonajes{
         this.desplegadas=[];
         this.logrosDesplegados=false;
         this.puntos=puntosInicio;
+        this.idiomaSeleccionado="ESP";
+        this.idiomas=["ESP","ENG"];
+        this.resourceLoader=new ResourceLoader(this.idiomaSeleccionado, ()=>{this.fetchIdioma().bind(this)});
+        this.localizator=new Localizator();
+        this.localizator.localizar();
         this.cargarArchivo();
         this.cargarArchivoIntra();
         this.cargarArchivoLogros();
         this.initData();
         
+    }
+    getResource(data, id){
+        return this.resourceLoader.getResource(data,id, this.idiomaSeleccionado);
+    }
+    clearElement(id){
+        var div = document.getElementById(id);
+        while(div.firstChild){
+            div.removeChild(div.firstChild);
+        }
     }
 
     crearBotones() {
@@ -60,7 +75,7 @@ class CreadorDePersonajes{
        
     }
 
-    crearBoton(infoBoton){
+     crearBoton(infoBoton){
         var boton = document.createElement("button");
         boton.textContent = infoBoton["tituloCat"];
         boton.addEventListener("click",this.desplegar.bind(this,infoBoton.nombreCat));
