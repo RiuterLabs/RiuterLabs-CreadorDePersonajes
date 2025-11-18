@@ -2,7 +2,10 @@
 class ResourceLoader{
 
     constructor(){
-        this.datos={};
+        this.datos={
+            "ESP":datos_ESP,
+            "ENG":datos_ENG
+        };
         this.datosIntra={};
         this.general={
             "ESP":data_general_ESP,

@@ -18,12 +18,13 @@ class CreadorDePersonajes{
         this.idiomaSeleccionado="ESP";
         this.idiomas=["ESP","ENG"];
         this.resourceLoader=new ResourceLoader(this.idiomaSeleccionado, ()=>{this.fetchIdioma().bind(this)});
-        this.localizator=new Localizator();
-        this.localizator.localizar();
+        
         this.cargarArchivo();
         this.cargarArchivoIntra();
         this.cargarArchivoLogros();
         this.initData();
+        this.localizator=new Localizator();
+        this.localizator.localizar();
         
     }
     getResource(data, id){
@@ -42,17 +43,20 @@ class CreadorDePersonajes{
         seccionBotones.innerHTML = "";
         var title = document.createElement("h3");
         title.textContent = "Botones";
+        var cats = [];
 
         for (var i = 0; i<data.length; i++){
             var element = data[i];
             var seccionBoton = document.createElement("div");
             seccionBoton.id = element["nombreCat"]
             var boton = this.crearBoton(element);
-            
+            cats.push(element.nombreCat);
             seccionBoton.append(boton);
             seccionBotones.append(seccionBoton);
             this.crearTarjetas2(element);
         }
+
+        this.localizator.setDataCats(cats);
        
     }
     crearBotonesIntra() {
@@ -77,6 +81,8 @@ class CreadorDePersonajes{
 
      crearBoton(infoBoton){
         var boton = document.createElement("button");
+        var id = "toggle"+infoBoton.nombreCat;
+        boton.id=id;
         boton.textContent = infoBoton["tituloCat"];
         boton.addEventListener("click",this.desplegar.bind(this,infoBoton.nombreCat));
         return boton;
@@ -156,17 +162,21 @@ class CreadorDePersonajes{
 
     crearTarjeta(info){
         var tarjeta = document.createElement("section");
-        tarjeta.id = info["id"]
+        var id= info["id"];
+        tarjeta.id = id
+        this.localizator.addCardID(id);
         var h4 = document.createElement("h4");
         h4.textContent = info["titulo"];
+        h4.id="title"+id;
         var puntos = document.createElement("p");
         puntos.textContent = info["coste"];
         var img = document.createElement("img");
+        img.id="img"+id;
         $(img).attr("src","../multimedia/imagenes/creador/"+info["id"]+".jpg");
         $(img).attr("alt",info["desc"]);
         var desc = document.createElement("p");
         desc.textContent = info["desc"];
-
+        desc.id="desc"+id;
         tarjeta.addEventListener("click",this.addTf.bind(this,info));
 
         tarjeta.append(h4);
