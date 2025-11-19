@@ -118,8 +118,8 @@
                 
             },
             {
-                "id":"Creacion",
-                "titulo":"Creación",
+                "id":"Penitencia",
+                "titulo":"Penitencia",
                 "coste":0,
                 "desc":"Desde tiempos de Hana-Mesa-Hila, este Núcleo ha pasado de malas manos a malas manos. ¡Y normal, viendo que es el Núcleo de la censura (y templanza)! Menos mal que Hall desapareció bajo circunstancias misteriosas.",
                 "requisitos":[
@@ -197,10 +197,10 @@
                 
             },
             {
-                "id":"Comunion",
-                "titulo":"Comunión",
+                "id":"Voluntad",
+                "titulo":"Voluntad",
                 "coste":0,
-                "desc":"Una de dos, o te gusta ser el centro de atención de todas las situaciones en las que estás (Es decir, sigues a Adamarein) o eres una persona empática que comprende y quiere ayudar a todo el mundo (Es decir, no sigues ni a Adamarein ni a La Madre), no hay término medio. Seas lo que seas, si lo que quieres es conectarte con el mundo, sus habitantes y sus daemonios, ¡Estás en el sitio correcto!"
+                "desc":"Bueno, bueno, bueno... ¡Una protagonista! Nah, ahora en serio, si eliges este núcleo es que claramente tienes (O quieres tener) una fuerza de voluntad tan fuerte que haga a todo el mundo (Literalmente, no solo a la gente) postrarse a tus pies, ¿Y sabes qué? ¡Adelante! ¡Ve a por ello! ¡Estira y retuerce el mundo y su lógica! ¡Haz que la física sea tu perra! ¡SÉ LIBRE! (Los Laboratorios Riuter no se hacen responsables de las barbaridades que puedan hacerse con este núcleo, las quejas a Santa Megumi, que por algo lo porta)"
                 ,"requisitos":[
                     "Naturales"
                 ]
