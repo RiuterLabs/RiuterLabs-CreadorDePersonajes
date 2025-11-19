@@ -80,7 +80,7 @@ const datos_ENG ={
     pocoPechotitle:"Small chest",
     pocoPechodesc:"You have some chest. Even though many people would consider it little, it is the most practical size for athletics and jumping around",
     intermediotitle:"Intermediate",
-    intermediodesc:"El punto medio perfecto, suficientemente grandes como para que se noten, pero no lo suficiente como para que molesten. Pero, ¿De verdad estamos pensando en practicidad?",
+    intermediodesc:"The perfect middleground, big enough to be noticed and small enough not to be a burden. But, are we realy thinking about practicity here?",
     grandetitle:"Grandes",
     grandedesc:"Now we're talking! Good, big, and beautiful, perfect for grabbing and showing off. Suitable for a true mammarie glands' fan!",
     enormestitle:"Enormous",
