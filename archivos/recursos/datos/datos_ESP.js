@@ -221,5 +221,37 @@ const datos_ESP ={
     faccEnclavestitle:"Enclaves Libres",
     faccEnclavesdesc:"La facción más hetereogénea y variada de todas. Dividida en capitanías que funcionan como una máquina perfectamente engrasada bajo la atenta mirada y apoyo del Don de los Enclaves. ¿Quieres cocinar? ¡Ve al distrito de la restauración! ¿Quieres producir químicos? ¡PhlecksChem te recibirá con los brazos abiertos! ¿Quieres un par de tragos? ¡El Bubble's siempre está abierto y Gums siempre estará ahí para ti! Eso sí, recuerda pagar tus impuestos y responder a los llamados de auxilio de la gente a tu alrededor, o podría ser que nadie responda a los tuyos.",
     faccTimarAurhumtitle:"Ejército Dorado de Timar Aurhum",
-    faccTimarAurhumdesc:"¡Honrada, fuerte, poderosa y profesional! Así es como se define a sí misma la gente de Timar Aurhum (Se suelen olvidar de la parte del palo metido por el culo, pero bueno). Este orgulloso pueblo de soldados, herreros y mineros está hoy en día dividido por un conflicto de sucesión. La gente tiene que decidir si apoyar al Rey Aureliano, fundador del país y gobernante absoluto expansionista del mismo, o a su hija, la Princesa Electra, que aboga por afrontar las relaciones exteriores con un enfoque más diplomático, por decirlo de alguna forma. ¿Qué eligirías tú?"
+    faccTimarAurhumdesc:"¡Honrada, fuerte, poderosa y profesional! Así es como se define a sí misma la gente de Timar Aurhum (Se suelen olvidar de la parte del palo metido por el culo, pero bueno). Este orgulloso pueblo de soldados, herreros y mineros está hoy en día dividido por un conflicto de sucesión. La gente tiene que decidir si apoyar al Rey Aureliano, fundador del país y gobernante absoluto expansionista del mismo, o a su hija, la Princesa Electra, que aboga por afrontar las relaciones exteriores con un enfoque más diplomático, por decirlo de alguna forma. ¿Qué eligirías tú?",
+
+
+    IdentidadGenero:"Identidad de Género",
+    igCisttitle:"Cisgénero",
+    igCisdesc:"Te identificas con el género que se te asignó al nacer. Aún así, es bastante probable que tengas tus cositas con tu cuerpo, como todo el mundo.",
+    igTranstitle:"Transgénero",
+    igTransdesc:"No te identificas con el género que se te asignó al nacer. Sé lo que jode, no reconocerte en el espejo, sentirte directamente mal dentro de tu cuerpo... Créeme, estamos igual. Por suerte en ese mundo sí que podrás ser quien realmente eres.",
+    igFluidtitle:"Género fluido",
+    igFluiddesc:"Tu identidad de género va cambiando con el tiempo en un proceso gradual y de ritmo variado. ¡Pero estás en el sitio indicado! Con una forma igual de fluida, tener un cuerpo en el que te sientas bien en todo momento es bastante sencillo, la verdad.",
+
+    OrigenEspecie:"Origen de la especie",
+    Nacimientotitle:"De nacimiento",
+    Nacimientodesc:"Formas parte de esa especie de nacimiento, por lo que tendrás un control de tus habilidades base superior. Una pena que no hayas podido experimentar el placer de una transformación...",
+    OrigenTransformaciontitle:"Transformación",
+    OrigenTransformaciondesc:"Has tenido que pasar por una transformación para llegar a tu especie actual, por lo que es bastante probable que te cueste un poco al principio, la verdad. Pero eh, el placer de una maleabilización es de los mayores de este mundo...",
+
+    TipoTransformacionOrigen:"Motivación de la transformación de origen",
+    otMedicatitle:"Médica",
+    otMedicadesc:"Ya sea por alguna enfermedad grave, un accidente o algo crónico, has tenido que transformarte. No te voy a engañar, es la forma más rápida y sencilla de librarte de todo eso, mira a la Princesa Electra y a su madre.",
+    otPsicologicatitle:"Psicológica",
+    otPsicologicadesc:"La más común, si te soy sincera. Hoy en día hay mucha gente que no nos sentimos bien en nuestro propio cuerpo hasta el punto de que no es que nos gustaría modificarlo, sino que NECESITAMOS cambiarlo de alguna forma. Si ese es tu caso, adelante, pronto te darás cuenta de que es la mejor decisión que has tomado en tu vida.",
+    otAccidentaltitle:"Accidental",
+    otAccidentaldesc:"Vaya, por la madre, entre unas cosas y otras te has visto envuelto en una situación que te ha hecho transformarte sin querer. Bueno, si en algún momento necesitas ayuda psicológica o apoyo en general, siempre nos tienes a mano. Cam empezó así y ahora está bastante bien. Espero que ese Megunopythecus no te haya dejado un trauma...",
+    otEsteticatitle:"Estética",
+    otEsteticadesc:"No te sentías a gusto en tu cuerpo y te transformaste para cambiarlo, ¿No? ¡Completamente comprensible! Yo también lo hice por eso y la verdad es que no me arrepiento.",
+    otRecreativatitle:"Recreativa",
+    otRecreativadesc:"Simplemente querías pasar un buen rato y te parecía buena idea transformarte. ¡No te culpo! El proceso es maravilloso, de las cosas más placenteras que una persona puede experimentar. Eso sí, ten cuidado, porque puede ser que te lleves un par de sorpresas...",
+    otMejoratitle:"Mejora corporal",
+    otMejoradesc:"Así que quisiste mejorar tu cuerpo más allá de los límites humanos... Una de dos, o te dedicabas al deporte honesto y necesitabas ir más allá sin el uso de esteroides, o las drogas no te daban los resultados que esperabas. O simplemente querías mejorar tu condición física, claro.",
+    Subfaccion:"Subfacción"
+
+
 }

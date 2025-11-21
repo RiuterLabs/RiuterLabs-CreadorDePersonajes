@@ -221,5 +221,35 @@ const datos_ENG ={
     faccEnclavestitle:"Free Enclaves",
     faccEnclavesdesc:"The most heterogeneous and varied faction of them all. Divided in captainships that work like the pieces of a perfectly oiled machine under the ruling and support of the Don of the Enclaves. You wanna cook? Go to the restoration district! You wanna make chemical stuff? PhlecksChem with recieve you with open arms! You wana drink? The Bubble's always open and Gums will always be there for you! But remember to pay your taxes and listen to the calls for help of your neighbors, or maybe no one will listen to yours.",
     faccTimarAurhumtitle:"The Golden Army of Timar Aurhum",
-    faccTimarAurhumdesc:"Honorable, strong, mighty and professional! That's how the people of Timar Aurhum describe themselves (They usually forget to say they have a stick up their asses, but that may be a honest mistake). This proud country of soldiers, blacksmiths and miners is now being divided by a succession conflict. They have to choose wether to support King Aureliano, founder of the country and absolute expansionist ruler of it, or his daughter, Princess Electra, who wants to have a more diplomatic and respectful approach to international relationships. Which one would you choose?"
+    faccTimarAurhumdesc:"Honorable, strong, mighty and professional! That's how the people of Timar Aurhum describe themselves (They usually forget to say they have a stick up their asses, but that may be a honest mistake). This proud country of soldiers, blacksmiths and miners is now being divided by a succession conflict. They have to choose wether to support King Aureliano, founder of the country and absolute expansionist ruler of it, or his daughter, Princess Electra, who wants to have a more diplomatic and respectful approach to international relationships. Which one would you choose?",
+
+
+    IdentidadGenero:"Gender identity",
+    igCisttitle:"Cisgender",
+    igCisdesc:"You identify with the gender assigned to you at birth. However, it's possible that you're not completely confortable with your body, like all of us",
+    igTranstitle:"Transgender",
+    igTransdesc:"You don't identify with the gender assigned to you at birth. Trust me, I know how rough it is, not recognizing the person in the mirror, feeling sick inside your own body... Yeah, same. Fortunately you can be who you really are in this world",
+    igFluidtitle:"Genderfluid",
+    igFluiddesc:"Your gender identity changes in a paulatine process and at an irregular pace. But you're in the right place! With a form as fluid as your gender, having a body that feels confortable at all times is now pretty easy, to be honest.",
+
+    OrigenEspecie:"Origin of the Species",
+    Nacimientotitle:"Birth",
+    Nacimientodesc:"You're a part of your species from birth, so you'll be able to control your body better without training. Shame you didn't experience the bliss of a transformation...",
+    OrigenTransformaciontitle:"Transformation",
+    OrigenTransformaciondesc:"You had to go through a transformation to become your current species, so it may be a bit hard to control your body in the beginning, to be frank. But hey, the pleasure of malleabilizing yourself is something beyond our comprehension...",
+
+    TipoTransformacionOrigen:"Origin transformation motivation",
+    otMedicatitle:"Medical",
+    otMedicadesc:"Be it due to a life threatening condition, an accident or a chronic illness of any kind, you had to transform. I'm not going to lie, it's the easiest and simplest way to get rid of all that, just like Princess Electra and her mother did.",
+    otPsicologicatitle:"Psicological",
+    otPsicologicadesc:"The most common, if I may be honest. Nowadays there are a lot of people who don't feel well in our own body even to the point of not only wanting to change it, but NEEDING to do it in any way. If this is your case, welcome to the club, you'll soon realize this was the best decission you ever made",
+    otAccidentaltitle:"Accidental",
+    otAccidentaldesc:"Oh, by the Mother, by some twist of fate you have been put in a situation that has made you transform without planning for it. Well, if you need therapy or any kind of support, we're always here for you. Cam began just like that and she's doing amazing nowadays. I hope that Megunopythecus didn't cause you any trauma...",
+    otEsteticatitle:"Cosmetic",
+    otEsteticadesc:"You weren't confortable in your own body, so you transformed in order to change it, didn't you? Completely understandable! I did it just like you, and I don't regret it a single bit.",
+    otRecreativatitle:"Recreative",
+    otRecreativadesc:"You just wanted to have a ball and considered that transforming was a good idea. I don't blame you! The process is wonderful, one of the most pleasurable things a person can experience. However, be careful, you might have surprising revelations...",
+    otMejoratitle:"Body enhancement",
+    otMejoradesc:"So you wanted to enhance your body beyond human limitations... You're either a honest athlete and you needed to go beyond without the use of anabolics or someone who was disappointed by the effects of said substances. Or you may just have wanted to become fitter, of course.",
+    Subfaccion:"Subfaction"
 }

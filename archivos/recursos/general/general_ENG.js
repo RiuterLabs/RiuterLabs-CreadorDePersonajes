@@ -19,6 +19,7 @@ const data_general_ENG= {
     "edadTitulo":"Select your birthday and age",
     "dias":"Day",
     "mes":"Month",
-    "edad":"Age"
+    "edad":"Age",
+    pronombres:"Pronouns"
 }
 

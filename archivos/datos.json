@@ -1,104 +1,39 @@
 [
-    {
-        "nombreCat":"Género",
-        "tituloCat":"Género",
+    
+     {
+        "nombreCat":"IdentidadGenero",
+        "tituloCat":"Identidad de Género",
 
         "tarjetas":[
             {
-                "id":"Masculino",
-                "titulo":"Masculino",
+                "id":"igCis",
+                "titulo":"Cisgénero",
                 "coste":0,
-                "desc":"Eres un ser masculino",
+                "desc":"Te identificas con el género que se te asignó al nacer. Aún así, es bastante probable que tengas tus cositas con tu cuerpo, como todo el mundo.",
                 "incompatibilidades":[
-                    "Femenino",
-                    "No-Binarie"
+                    "igTrans",
+                    "igFluid"
                 ]
                 
             },
             {
-                "id":"Femenino",
-                "titulo":"Femenino",
+                "id":"igTrans",
+                "titulo":"Transgénero",
                 "coste":0,
-                "desc":"Eres un ser femenino",
+                "desc":"No te identificas con el género que se te asignó al nacer. Sé lo que jode, no reconocerte en el espejo, sentirte directamente mal dentro de tu cuerpo... Créeme, estamos igual. Por suerte en ese mundo sí que podrás ser quien realmente eres.",
                 "incompatibilidades":[
-                    "Masculino",
-                    "No-Binarie"
+                    "igCis",
+                    "igFluid"
                 ]
             },
             {
-                "id":"No-Binarie",
-                "titulo":"No Binarie",
+                "id":"igFluid",
+                "titulo":"Género fluido",
                 "coste":0,
-                "desc":"Eres un ser no binarie",
+                "desc":"Tu identidad de género va cambiando con el tiempo en un proceso gradual y de ritmo variado. ¡Pero estás en el sitio indicado! Con una forma igual de fluida, tener un cuerpo en el que te sientas bien en todo momento es bastante sencillo, la verdad.",
                 "incompatibilidades":[
-                    "Femenino",
-                    "Masculino"
-                ]
-            }
-        ]
-        
-    },
-    {
-        "nombreCat":"Sexualidad",
-        "tituloCat":"Sexualidad",
-
-        "tarjetas":[
-            {
-                "id":"Heterosexual",
-                "titulo":"Heterosexual",
-                "coste":0,
-                "desc":"Te gustan las personas del género opuesto.",
-                "incompatibilidades":[
-                    "Homosexual",
-                    "Asexual",
-                    "Bisexual",
-                    "Pansexual"
-                ]
-                
-            },
-            {
-                "id":"Homosexual",
-                "titulo":"Homosexual",
-                "coste":0,
-                "desc":"Te gustan las personas de tu mismo género",
-                "incompatibilidades":[
-                     "Heterosexual",
-                    "Asexual",
-                    "Bisexual",
-                    "Pansexual"
-                ]
-            }, {
-                "id":"Bisexual",
-                "titulo":"Bisexual",
-                "coste":0,
-                "desc":"Te gustan las personas masculinas y femeninas",
-                "incompatibilidades":[
-                     "Homosexual",
-                    "Asexual",
-                    "Heterosexual",
-                    "Pansexual"
-                ]
-            }, {
-                "id":"Pansexual",
-                "titulo":"Pansexual",
-                "coste":0,
-                "desc":"Le das a absolutamente todo. La verdad es que es la mejor opción si no te quieres cerrar ninguna puerta.",
-                "incompatibilidades":[
-                     "Homosexual",
-                    "Asexual",
-                    "Bisexual",
-                    "Heterosexual"
-                ]
-            }, {
-                "id":"Asexual",
-                "titulo":"Asexual",
-                "coste":0,
-                "desc":"No tienes ningún tipo de atracción sexual por nadie.",
-                "incompatibilidades":[
-                     "Homosexual",
-                    "Heterosexual",
-                    "Bisexual",
-                    "Pansexual"
+                    "igCis",
+                    "igTrans"
                 ]
             }
         ]

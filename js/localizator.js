@@ -36,6 +36,7 @@ class Localizator{
         this.crearBotonesIdioma();
         this.updateCargarYDescargar();
         this.localizarNombre();
+        this.localizarPronombres();
         this.localizarColores();
         this.localizarPuntos();
         this.localizarSeccionesData("datos");
@@ -120,6 +121,10 @@ class Localizator{
 
     localizarNombre(){
         this.setText("nombreTitulo","general","nombreTitulo");
+    }
+
+    localizarPronombres(){
+        this.setText("pronombresLabel","general","pronombres");
     }
     
     localizarPuntos(){

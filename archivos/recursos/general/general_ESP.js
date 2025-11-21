@@ -19,5 +19,6 @@ const data_general_ESP={
     "edadTitulo":"Selecciona tu edad y fecha de nacimiento",
     "dias":"Día",
     "mes":"Mes",
-    "edad":"Edad"
+    "edad":"Edad",
+    pronombres:"Pronombres"
 }

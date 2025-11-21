@@ -11,6 +11,7 @@ class CreadorDePersonajes{
         this.colorPelo="";
         this.name="";
         this.nameIntra="";
+        this.pronombres="";
         this.maxDias=15;
         this.meses=["Zannes","Tolmaral" ,"Qatar","Mayal","Berbal", "Fix","Hana","Mirel","Vera","Axtor","Amthos"
 ,"Daeris","Décimo","Adamar","Yul","Nictal","Prak","Cael","Phradi","Jar","Daeda","Omnys","Tenet","Maerul","Lloretz"]
@@ -309,6 +310,7 @@ class CreadorDePersonajes{
 
     updateVista(){
         this.updateNombre();
+        this.updatePronombre();
         this.updateNombreIntra();
         this.updateColorOjos();
         this.updateColorPelo();
@@ -393,6 +395,13 @@ class CreadorDePersonajes{
         if(this.name==undefined || this.name==null)
             this.name = "";
         nombreTexto.val(this.name);
+    }
+
+     updatePronombre(){
+        var nombreTexto = $("#pronombres");
+        if(this.pronombres==undefined || this.pronombres==null)
+            this.pronombres = "";
+        nombreTexto.val(this.pronombres);
     }
 
     updateNombreIntra(){
@@ -572,6 +581,7 @@ class CreadorDePersonajes{
             "seleccionados":this.selected,
             "desplegadas":this.desplegadas,
             "nombre": this.name,
+            "pronombres":this.pronombres,
             "nombreIntra": this.nameIntra,
             "colorOjos":this.colorOjos,
             "colorPelo":this.colorPelo,
@@ -611,6 +621,9 @@ class CreadorDePersonajes{
                     this.name = datos.nombre;
                     if(this.name == undefined)
                         this.name = "";
+                     this.pronombres = datos.pronombres;
+                    if(this.pronombres == undefined)
+                        this.pronombres = "";
                     this.nameIntra = datos.nombreIntra;
                     if(this.nameIntra == undefined)
                         this.nameIntra = "";
@@ -767,6 +780,11 @@ class CreadorDePersonajes{
     cambiarNombre(){
         var nombreTexto = $("#textoNombre");
         this.name = nombreTexto.val();
+        this.guardarEnBaseDeDatos();
+    }
+    cambiarPronombres(){
+        var nombreTexto = $("#pronombres");
+        this.pronombres = nombreTexto.val();
         this.guardarEnBaseDeDatos();
     }
     cambiarNombreIntra(){
